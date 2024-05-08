@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: VG-deployment
+  name: vg-deployment
   namespace: default
 spec:
   replicas: 3
