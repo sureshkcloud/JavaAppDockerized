@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: 294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:latest  # Replace 'latest' with the desired tag
+        image: 294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:28
         ports:
         - containerPort: 8080
         env:
@@ -32,6 +32,6 @@ spec:
             fieldRef:
               fieldPath: spec.nodeName
         - name: MY_IMAGE_NAME
-          value: "294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:latest"  # Adjust this to the current tag
+          value: "294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:28
       imagePullSecrets:
       - name: ecr-registry
