@@ -6,7 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+
+        
+@SpringBootApplication
+@Controller
 public class StartApplication {
 
     @Value("${MY_POD_NAME:not set}")
@@ -28,9 +31,6 @@ public class StartApplication {
                "<br>Node Name: " + nodeName +
                "<br>Image Name: " + imageName;
         
-@SpringBootApplication
-@Controller
-public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
