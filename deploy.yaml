@@ -15,11 +15,6 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: 294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:29
-        ports:
-        - containerPort: 8080
-        env:
-        - name: MY_IMAGE_NAME
-          value: "294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:29
+        image: 294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr:23
       imagePullSecrets:
-      - name: ecr-registry
+        - name: ecr-registry
