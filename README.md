@@ -19,7 +19,6 @@ One private repository: You can create one private repository to store your priv
 
 
 
-
 **Pull private Image from DockerHub (private image)**
 
 On k8 cluster, create a k8 secret which is pointing to Dockerhub account
