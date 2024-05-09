@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: 381492200529.dkr.ecr.us-east-1.amazonaws.com/project1-ecr:8
+        image: 294176318510.dkr.ecr.us-east-1.amazonaws.com/super30_ecr/:1
       imagePullSecrets:
         - name: ecr-registry
