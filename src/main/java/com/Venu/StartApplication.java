@@ -5,7 +5,32 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+public class StartApplication {
+
+    @Value("${MY_POD_NAME:not set}")
+    private String podName;
+
+    @Value("${MY_POD_NAMESPACE:not set}")
+    private String podNamespace;
+
+    @Value("${MY_NODE_NAME:not set}")
+    private String nodeName;
+
+    @Value("${MY_IMAGE_NAME:not set}")
+    private String imageName;
+
+    @GetMapping("/")
+    public String home() {
+        return "Running on Pod: " + podName + 
+               "<br>Pod Namespace: " + podNamespace +
+               "<br>Node Name: " + nodeName +
+               "<br>Image Name: " + imageName;
+        
 @SpringBootApplication
 @Controller
 public class StartApplication {
